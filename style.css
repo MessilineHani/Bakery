@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    height: fit-content;
+}
+h2{
+    font-family: "Raleway",sans-serif;
+    font-family: 700;
+}
+p{
+    font-family: "Open sans", sans-serif;
+    font-weight: 400;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+/* nav bar */
+.main-container .navbar{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+}
+.main-container .navbar .navbar-items{
+    width: 90%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: auto;
+}
+.main-container .navbar .navbar-items img:nth-child(1){
+    margin-left: 5%;
+    cursor: pointer;
+}
+.main-container .navbar .navbar-items img:nth-child(2){
+    width: 25px;
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%;
+    cursor: pointer;
+}
+/* section 1 */
+.main-container .section1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main-container .section1 img{
+    width: 55%;
+}
+
+.main-container .section1 .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 42%;
+    margin: 0 1.5%;
+}
+.main-container .section1 .info h2{
+    font-size: 55px;
+    word-spacing: 2px;
+    width: 80%;
+    margin: 20px 0;
+}
+.main-container .section1 .info p{
+    font-size: 16px;
+    width: 90%;
+    margin: 20px 0;
+}
+.main-container .section1 .info button{
+     width: 40%;
+     height: 55px;
+     border-radius: 30px;
+     border: none;
+     outline: none;
+     background-color:  #e2781a ;
+     color: #fff;
+     text-transform: uppercase;
+     font-size: 18px;
+     letter-spacing: 2px;
+     word-spacing: 2px;
+     cursor: pointer;
+     margin: 20px 0;
+     font-family: sans-serif ;
+     font-weight: 300;
+}
+.main-container .section1 .info button:hover{
+    background-color: #fff;
+    color: #e2781a;
+}
+/* section 2 */
+.main-container .section2{
+    width: 100%;
+    height: 300vh;
+    background-color: #e2781a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-container .section2 .section2-content-info{
+    width:65% ;
+    height: fit-content;
+    margin: 30px auto;
+    text-align: center;
+    color: #fff;
+}
+.main-container .section2 .section2-content-info h2{
+    font-size: 60px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.main-container .section2 .section2-content-info p{
+    font-size: 19px;
+    font-style: italic;
+    line-height: 35px;
+    margin: 10px 0;
+}
+.main-container .section2 .products{
+    width: 85%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap:30px;
+    margin: 30px auto 100px auto;
+}
+.main-container .section2 .product{
+    width:1fr;
+    background-color: #fff;
+    height: 500px;
+}
+.main-container .section2 .product .product-img{
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+.main-container .section2 .product img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: all .15s ease-out;
+}
+.main-container .section2 .product img:hover{
+    transform: scale(1.08);
+}
+.main-container .section2 .product .product-info{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+}
+.main-container .section2 .product .product-info h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    margin:10px 0;
+}
+.main-container .section2 .product .product-info p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.main-container .section2 .product .product-info h4{
+    font-size: 30px;
+    font-family:sans-serif;
+    font-weight: 700;
+    color: #e2781a;
+    letter-spacing: 2px;
+    margin: 20px 0 30px 0;
+}
+/* section 3 */
+.main-container .section3{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/footage/images/section2_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.main-container .section3 h2{
+    font-size: 45px;
+    margin: 10px 0;
+}
+.main-container .section3 p{
+    width: 60%;
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+}
+.main-container .section3 .fullMenu-orderNow-buttons{
+    width: 65%;
+    height: fit-content;
+}
+.main-container .section3 .fullMenu-orderNow-buttons button{
+    display: inline-block;
+    width: 25%;
+    height: 65px;
+    border: none;
+    outline:none;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border-radius:40px ;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 800;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.main-container .section3 .fullMenu-orderNow-buttons button:nth-child(1){
+    background-color: #e2781a;
+}
+.main-container .section3 .fullMenu-orderNow-buttons button:nth-child(2){
+    background:transparent;
+    border: solid #fff 2px;
+}
+.main-container .section3 .fullMenu-orderNow-buttons button:nth-child(1):hover{
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), #e2781a;
+}
+.main-container .section3 .fullMenu-orderNow-buttons button:nth-child(2):hover{
+    background-color: #fff;
+    color: #000;
+}
+/* section 4 */
+.main-container .section4{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-container .section4 h2{
+    font-size: 55px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.main-container .section4 .features{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 85%;
+    height: 60vh;
+    margin: 50px 0 20px 0;
+    grid-gap: 20px;
+}
+.main-container .section4 .features .feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main-container .section4 .features .feature img{
+    width: 20%;
+}
+.main-container .section4 .features .feature .feature-info{
+    width: 65%;
+    margin: 0 7.5%;
+}
+.main-container .section4 .features .feature .feature-info h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: "Releway",sans-serif;
+    margin:10px 0;
+}
+.main-container .section4 .features .feature .feature-info p{
+    font-size: 16px;
+    margin: 10px 0;
+}
+/* section 5 */
+.main-container .section5{
+    width: 100%;
+    height: 120vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/footage/images/section3_background.jpg) ;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-container .section5 h2{
+    color:#fff;
+    font-size: 55px;
+    margin: 30px 0;
+}
+.main-container .section5 .sweets{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-gap:40px;
+    margin: 5% 0;
+    width: 80%;
+    height: 50vh;
+}
+.main-container .section5 .sweets .sweet{
+    background-color: #fff;
+    padding: 20px;
+    text-transform: capitalize;
+}
+.main-container .section5 .sweets .sweet h3{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 4vh 20px;
+}
+.main-container .section5 .sweets .sweet ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    font-family: "Open sans", sans-serif;
+    font-size: 18px;
+}
+.main-container .section5 .sweets .sweet ul li{
+    margin: 7px 10px;
+}
+/* sectino 6 */
+.main-container .section6{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;   
+ width: 100%;
+ height: 100vh;
+ background-color: #ed7600;
+}
+.main-container .section6 img{
+    width: 60%;
+}
+.main-container .section6 .visit{
+    width: 25%;
+    margin: 0 7.5%;
+    color: #fff;
+    text-align: center;
+}
+.main-container .section6 .visit h2{
+    font-size: 55px; 
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.main-container .section6 .visit address{
+    font-style: none;
+    font-size: 20px;
+    width: 75%;
+    margin: 20px auto;
+    font-family: "Open sans", sans-serif;
+}
+.main-container .section6 .visit h3{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: rgba(250, 250, 250, 0.5);
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.main-container .section6 .visit p{
+    font-size: 20px;
+    margin: 5px 0 ;
+}
+.main-container .section6 .visit p:nth-child(3){
+    margin: 5px 0 30px 0;
+}
