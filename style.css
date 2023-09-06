@@ -269,6 +269,12 @@ p{
     margin: 50px 0 20px 0;
     grid-gap: 20px;
 }
+.main-container .section4 .features .feature .feature-info h3{
+    font-size: 20px;
+}
+.main-container .section4 .features .feature .feature-info p{
+    font-size: 16px;
+}
 .main-container .section4 .features .feature {
     display: flex;
     flex-direction: row;
@@ -418,9 +424,15 @@ p{
         .main-container .section1 .info{
             width: 65%;
         }
+        .main-container .section4 {
+            height: fit-content;
+        }
         .main-container .section4 .features{
             grid-template-columns: repeat(2,1fr);
-            height: fit-content;
+            height: fit-content;    
+        }
+        .main-container .section4 .features .feature .feature-info p{
+            font-size: 15px;
         }
         .main-container .section5 .sweets{
             width: 85%;
@@ -438,6 +450,12 @@ p{
             }
             .main-container .section3 p{
                 width: 70%;
+            }
+            .main-container .section5{
+                height: fit-content;
+            }
+            .main-container .section5 .sweets{
+                grid-template-columns: repeat(1,1fr);
             }
             
         }
