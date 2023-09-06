@@ -101,6 +101,7 @@ p{
 .main-container .section1 .info button:hover{
     background-color: #fff;
     color: #e2781a;
+    border: 2px solid #e2781a;
 }
 /* section 2 */
 .main-container .section2{
