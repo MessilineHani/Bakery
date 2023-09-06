@@ -318,7 +318,6 @@ p{
 .main-container .section5 .sweets{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(1,1fr);
     grid-gap:40px;
     margin: 5% 0;
     width: 80%;
@@ -358,6 +357,8 @@ p{
 }
 .main-container .section6 img{
     width: 60%;
+    height: 100%;
+    object-fit: cover   ;
 }
 .main-container .section6 .visit{
     width: 25%;
@@ -420,6 +421,14 @@ p{
     .main-container .section3 .fullMenu-orderNow-buttons button{
         width: 30%;
     }
+    .main-container .section6 img{
+        display: none;
+    }
+    .main-container .section6{
+        background: url(./footage/images/section4_background.jpg) center;
+        background-size:cover;
+        text-shadow: 1px 0 rgba(0,0,0,0.1);
+    }
     @media (max-width:  907px){
         .main-container .section1 .info{
             width: 65%;
@@ -434,9 +443,14 @@ p{
         .main-container .section4 .features .feature .feature-info p{
             font-size: 15px;
         }
-        .main-container .section5 .sweets{
-            width: 85%;
-            grid-gap:20px ;
+        .main-container .section6 .visit{
+            width: 50%;
+        }
+        .main-container .section6 .visit .phone{
+            width: 100%;
+        }
+        .main-container .section6 .visit .hours{
+            width: 100%;
         }
         @media (max-width: 767px){
             .main-container .section2{
@@ -454,10 +468,15 @@ p{
             .main-container .section5{
                 height: fit-content;
             }
-            .main-container .section5 .sweets{
-                grid-template-columns: repeat(1,1fr);
+            .main-container .section5{
+                height: fit-content;
             }
-            
+            .main-container .section5 .sweets{
+                width: 85%;
+                grid-gap:20px ;
+                height: fit-content;
+                grid-template-columns: repeat(2,1fr);
+            }
         }
     }
 
