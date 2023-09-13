@@ -3,19 +3,19 @@ logo.onclick = () =>{
     window.location.href = "https://messilinehani.github.io/bakery/";
 }
 /* Controlling the menu */
-const menu = document.getElementById("menu")
+const menu = document.getElementById("menu");
 const closeBtn = document.getElementById("close");
 const menuBtn = document.getElementById("menu-icon");
 try{
 closeBtn.onclick = () =>{
     menu.style.display = "none";
-    sectionsVC()
+    sectionsDC();
 }
 menuBtn.onclick = () =>{
     menu.style.display = "flex";
-    sectionsVC()
+    sectionsDC();
 }
-function sectionsVC(){  // VC = Visibility controller
+function sectionsDC(){  // DC = Display controller
     if (menu.style.display === "flex"){
         document.body.style.height = "100vh";
         document.body.style.overflow = "hidden";
@@ -37,7 +37,7 @@ btns.forEach(btn =>{
 /* Scroll up */
 const scrollBTN = document.getElementById("scroll-btn");
 function show_hide_SB(){ // SB = Scroll button
-    if(window.scrollY >= 1300){
+    if(window.scrollY >= 1200){
         scrollBTN.style.display = "flex";
         scrollBTN.style.justifyContent = "center";
         scrollBTN.style.alignItems = "center";
@@ -49,6 +49,7 @@ function show_hide_SB(){ // SB = Scroll button
         scrollBTN.style.display = "none";
     }
 }
+show_hide_SB();
 window.addEventListener("scroll", () =>{
     show_hide_SB();
 })
