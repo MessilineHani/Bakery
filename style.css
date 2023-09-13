@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500;700&display=swap');
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #ececec;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #cecece;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ed7600;
+}
 *{
     margin:0;
     padding:0;
@@ -19,6 +31,7 @@ p{
     width: 100%;
     height: 100%;
     background-color: #fff;
+    position: relative;
 }
 /* nav bar */
 .main-container .navbar{
@@ -395,27 +408,144 @@ p{
 .main-container .section6 .visit p:nth-child(3){
     margin: 5px 0 30px 0;
 }
+/*menu styling*/
+.main-container .menu,.main-container .menu .nav-list{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container .menu{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    animation: menu-apear 1s ease-in-out ;
+    flex-direction: row;
+}
+@keyframes menu-apear {
+    0%{
+        height: 0;
+        opacity: 0;
+        filter: blur(3px);
+    }
+}
+.main-container .menu #close{
+    filter: invert(100%);
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top:25px;
+    animation: spin 1.5s ease-out;
+    
+}
+@keyframes spin{
+    0%{
+        transform:rotate(180deg);
+    }
+}
+.main-container .menu #close:hover{
+    filter: invert(80%);
+}
+.main-container .menu .nav-list{
+    width: 25%;
+    height: 50%;
+    font-family: "Open sans", sans-serif;
+    font-weight: 500;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: start;
+}
+.main-container .menu .nav-list li{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: 50%;
+    position: relative;
+}
+.main-container .menu .nav-list li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all .5s ease-out;
+}
+.main-container .menu .nav-list li:hover::after{
+    width: 75%;
+    background-color: #cecece;
+}
+.main-container .menu .nav-list li.active::after{
+    width: 100%;
+    background-color: #fff;
+}
+.main-container .menu .nav-list li.active:hover::after{
+    background-color: #cecece;
+    width: 100%;
+}
+.main-container .menu .nav-list li a{
+    text-decoration: none;
+    color: #fff;
+}
+.main-container .menu .nav-list li:hover a{
+    color: #cecece;
+}
+/* scroll up button stylings */
+.scroll{
+    width: 40px;
+    height:40px;
+    background-color:rgb(236, 236, 236);
+    border-radius:50%;
+    position: fixed;
+    right:30px;
+    top:80vh;
+    display:none;
+    cursor:pointer;
+    animation: scroll-button-apear  1s ease-out;
+    transition: all .5s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.20) ;
+}
+.scroll:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 0 30px rgb(236, 236, 236);
+}
+@keyframes scroll-button-apear {
+    0%{
+        transform:translateY(300%);
+        opacity:0;
+        filter:blur(3px);
+    }
+}
+.scroll img{
+    width:100%;
+    transform:rotate(-90deg);
+    filter: invert(50%);
+}
+/* responsive design styling */
 @media (max-width:1237px) {
     .main-container .section1{
         background: url(./footage/images/3035613-98.jpg) left ;
         background-size: cover;
-
     }
-    .main-container .section1 img{
-        display: none   ;
+    .main-container .section1 img,  .main-container .section6 img{
+        display: none;
     }
     .main-container .section1 .info{
         width: 50%;
     }
-    .main-container .section1 .info h2, .main-container .section1 .info  p{
+    .main-container .section1 .info h2, .main-container .section1 .info  p,    .main-container .section1 .info button{
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
     .main-container .section1 .info h2,.main-container .section1 .info p{
         color: #fff;
         text-shadow: 1px 1px rgba(0,0,0,0.75);
-    }
-    .main-container .section1 .info button{
-        margin: 0 auto;
     }
     .main-container .section3 .fullMenu-orderNow-buttons{
         width: 80%;
@@ -423,14 +553,8 @@ p{
     .main-container .section3 .fullMenu-orderNow-buttons button{
         width: 30%;
     }
-    .main-container .section4{
+    .main-container .section4, .main-container .section4 .features{
         height: fit-content;
-    }
-    .main-container .section4 .features{
-        height: fit-content;
-    }
-    .main-container .section6 img{
-        display: none;
     }
     .main-container .section6{
         background: url(./footage/images/section4_background.jpg) center;
@@ -439,7 +563,7 @@ p{
     }
     @media (max-width:  907px){
         .main-container .section1 .info{
-            width: 65%;
+            width: 80%;
         }
         .main-container .section4 {
             height: fit-content;
@@ -459,7 +583,13 @@ p{
         .main-container .section6 .visit .hours{
             width: 100%;
         }
+        .scroll{
+            right:20px;
+        }
         @media (max-width: 767px){
+            .main-container .section1 .info button{
+                width: 75%;
+            }
             .main-container .section2 .products{
                 grid-template-columns: repeat(2,1fr);
             }
@@ -468,9 +598,6 @@ p{
             }
             .main-container .section3 p{
                 width: 70%;
-            }
-            .main-container .section5{
-                height: fit-content;
             }
             .main-container .section5{
                 height: fit-content;
@@ -484,7 +611,18 @@ p{
             .main-container .section3 .fullMenu-orderNow-buttons button{
                 display: block;
                 margin: 10px auto;
-                width: 35%;
+                width: 50%;
+            }
+            .scroll{
+                right:calc(50% - 20px);
+                background: #1b1b1b;
+                box-shadow: unset;
+            }
+            .scroll:hover{
+                box-shadow: unset;
+            }
+            .scroll img{
+                filter:invert(100%);
             }
             @media (max-width:489px){
                 .main-container .section1 .info h2{
@@ -495,14 +633,13 @@ p{
                     text-align: center;
                 }
                 .main-container .section1 .info button{
-                    width: 50%;
                     padding: 5px 10px;
                 }
                 .main-container .section2 .products{
                     grid-template-columns: 1fr;
                 }
                 .main-container .section3 .fullMenu-orderNow-buttons button{
-                    width: 50%;
+                    width: 75%;
                 }
                 .main-container .section4 .features{
                     grid-template-columns: 1fr;
@@ -510,9 +647,12 @@ p{
                 .main-container .section5 .sweets{
                     grid-template-columns: 1fr;
                 }
+                .scroll{
+                    width:30px;
+                    height:30px;
+                }
+
             }
         }
     }
-
-
 }

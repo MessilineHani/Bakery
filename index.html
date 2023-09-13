@@ -14,16 +14,24 @@
     <div class="main-container">
         <div class="navbar">
             <div class="navbar-items">
-                <img src="./footage/images/website_logo.png" alt="" id="logo">
-                <img src="./footage/images/menu.png" alt="">
+                <img src="./footage/images/website_logo.png" alt="" id="logo" title="bakery">
+                <img src="./footage/images/menu.png" alt="" id="menu-icon" class="menu-controller" title="open menu">
             </div>
+        </div>
+        <div class="menu" id="menu">
+            <img src="./footage/images/close.png" alt="close" id="close" title="close" class="menu-controller">
+            <ul class="nav-list" id="navli">
+                <li id="listItem" class="active"><a href="#" class="link" title="Home page">Home</a></li>
+                <li id="listItem"><a href="./404.html" class="link" title="About us">about</a></li>
+                <li id="listItem"><a href="./404.html"  class="link" title="Contact">contact</a></li>
+            </ul>
         </div>
         <div class="section1">
             <img src="./footage/images/3035613-98.jpg" alt="bread">
             <div class="info">
                 <h2>Fresh breads, cakes and pasties</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officia a minus error molestias at eaque dicta provident ullam omnis!</p>
-                <button type="button">Read More</button>
+                <button type="button" class="btn">Read More</button>
             </div>
         </div>
         <div class="section2">
@@ -128,8 +136,8 @@
             <h2>Roll, proof, and bake. Every day.</h2>
             <p>When it comes to bread and sandwiches, freshness equals quality. That's why we bake our loaves, bagels, and sweet treats every single morning for maximum freshness.</p>
             <div class="fullMenu-orderNow-buttons">
-                <button type="button">see full menu</button>
-                <button type="button">order now</button>
+                <button type="button" class="btn">see full menu</button>
+                <button type="button" class="btn">order now</button>
             </div>
         </div>
         <div class="section4">
@@ -231,6 +239,9 @@
                 </div>
             </div>
             <img src="./footage/images/section4_background.jpg" alt="">
+        </div>
+        <div class="scroll" id="scroll-btn" title="Go back">
+            <img src="./footage/images/right.png" alt="Scroll up">
         </div>
     </div>
 </body>
