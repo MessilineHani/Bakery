@@ -561,6 +561,9 @@ p{
         background-size:cover;
         text-shadow: 1px 0 rgba(0,0,0,0.1);
     }
+    .main-container .section6 .visit h3{
+        color: rgba(237, 118, 0, 0.5)
+    }
     @media (max-width:  907px){
         .main-container .section1 .info{
             width: 80%;
@@ -587,6 +590,17 @@ p{
             right:20px;
         }
         @media (max-width: 767px){
+            .main-container .navbar{
+                overflow: hidden;
+            }
+            .main-container .navbar .navbar-items img:nth-child(1){
+                height: 100%;
+                margin: auto 20px auto 0;
+            }
+            .main-container .navbar .navbar-items img:nth-child(2){
+                height: 35%;
+                margin: auto 40px auto 0;
+            }
             .main-container .section1 .info button{
                 width: 75%;
             }
@@ -615,6 +629,7 @@ p{
             }
             .scroll{
                 right:calc(50% - 20px);
+                top: 92vh;
                 background: #1b1b1b;
                 box-shadow: unset;
             }
@@ -646,6 +661,13 @@ p{
                 }
                 .main-container .section5 .sweets{
                     grid-template-columns: 1fr;
+                }
+                .main-container .section6{
+                    height: fit-content;
+                }
+                .main-container .section6 .visit{
+                    height:fit-content;
+                    margin:10px 0;
                 }
                 .scroll{
                     width:30px;

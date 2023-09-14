@@ -2,7 +2,7 @@ const logo = document.getElementById("logo");
 logo.onclick = () =>{
     window.location.href = "https://messilinehani.github.io/bakery/";
 }
-/* Controlling the menu */
+// Controlling the menu 
 const menu = document.getElementById("menu");
 const closeBtn = document.getElementById("close");
 const menuBtn = document.getElementById("menu-icon");
@@ -27,14 +27,14 @@ function sectionsDC(){  // DC = Display controller
 }catch(err){
     window.alert("something went wrong");
 }
-/* Alert message */
+// Alert message 
 const btns = document.querySelectorAll(".btn");
 btns.forEach(btn =>{
     btn.onclick = () =>{
         window.alert("Coming soon");
     }
 })
-/* Scroll up */
+// Scroll up
 const scrollBTN = document.getElementById("scroll-btn");
 function show_hide_SB(){ // SB = Scroll button
     if(window.scrollY >= 1200){
