@@ -42,7 +42,11 @@ function show_hide_SB(){ // SB = Scroll button
         scrollBTN.style.justifyContent = "center";
         scrollBTN.style.alignItems = "center";
         scrollBTN.onclick = () =>{
-            window.scrollTo(0,0) ;
+            window.scrollTo({
+                top:0,
+                left:0,
+                behavior : "smooth"
+            }) ;
         }
     }
     else{
