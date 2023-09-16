@@ -1,6 +1,6 @@
 const logo = document.getElementById("logo");
 logo.onclick = () =>{
-    window.location.href = "https://messilinehani.github.io/bakery/";
+    window.location.href = "../index.html";
 }
 // Controlling the menu 
 const menu = document.getElementById("menu");
